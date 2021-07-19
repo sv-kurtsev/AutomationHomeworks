@@ -1,16 +1,18 @@
 package com.java.homework_1.zakupka;
 
 public class Zakupka {
-    public static void main(String[] args) {
-        boolean sort1 = false;
-        boolean sort2 = true;
-        boolean inStock = false;
-        if (sort1 || sort2) {
-            inStock = true;
-            System.out.println("Apples are in stock");
-        } else {
-            System.out.println("Apples are out of stock");
+
+        boolean sort1;
+        boolean sort2;
+        boolean inStock;
+         boolean calculateApples(boolean sort1, boolean sort2) {
+             this.sort1 = sort1;
+             this.sort2 = sort2;
+            inStock = sort1 || sort2;
+            return inStock;
         }
-        System.out.println(inStock);
+    public static void main(String[] args) {
+             Zakupka resultApples = new Zakupka();
+        System.out.println(resultApples.calculateApples(false, true));
     }
 }
